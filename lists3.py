@@ -1,14 +1,21 @@
 # Lists3
 
-import random
+import random, os
+os.system("cls")
 
-spellen = ['Monopoly', 'Yathzee', 'Bridge', 'Poker', 'Pesten', 'Mens erger je niet', 'Cluedo']
+gameList = ['Monopoly', 'Yathzee', 'Bridge', 'Poker', 'Pesten', 'Mens erger je niet', 'Cluedo']
 
-def function():
-    eindlijst = list()
-    for i in range(10):
-        eindlijst.append(spellen[random.randint(0,len(spellen)-1)])
-    print(eindlijst)
+def gameProgram(gameList, minimum: 3, maximum: 11):
+    lijst = list()
+    for i in range(random.randint(minimum, maximum)):
+        lijst.append(random.choice(gameList))
+    return lijst
 
-function()
-#print(spellen)
+minimum = int(input("What would you like to be the minimum amount of games displayed in the list?\n"))
+maximum = int(input("\nAnd the maximum?\n"))
+if minimum > maximum:
+    maximum = minimum
+    minimum = maximum
+
+games = gameProgram(gameList, minimum, maximum)
+print(games)

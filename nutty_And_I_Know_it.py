@@ -1,19 +1,21 @@
 # Nutty
-colorsL = ['orange', 'blue', 'green', 'brown']
+
 import random, os
 os.system("cls")
 
-colorsD = {
+colorsL = ['orange', 'blue', 'green', 'brown']
+
+def zakMnMF(amount):
+    colorsD = {
     "orange": 0,
     "blue": 0,
     "green": 0,
     "brown": 0
 }
+    for i in range(amount):
+        colorsD[random.choice(colorsL)] += 1
+    return colorsD
 
 amount = int(input("How many MnMs? "))
-def zakMnMF(amount):
-    for i in range(amount):
-        colorsD[colorsL[random.randint(0,len(colorsL)-1)]] += 1
-    return colorsD
 zakMnM = zakMnMF(amount)
 print(zakMnM)

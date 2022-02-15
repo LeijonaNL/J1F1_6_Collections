@@ -16,13 +16,13 @@ for i in range(5, 7):
     print(days[i])
 
 print('\nAll days of the week, reverse:')
-for i in range(7, 0, -1):
+for i in range(6, -1, -1):
     print(days[i])
 
 print('\nAll work days, reverse:')
-for i in range(5, 0, -1):
+for i in range(4, -1, -1):
     print(days[i])
 
 print('\nAll weekend days, reverse:')
-for i in range(7, 5, -1):
+for i in range(6, 4, -1):
     print(days[i])

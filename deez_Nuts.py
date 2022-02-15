@@ -11,6 +11,7 @@ def zak(amount):
     zakMM = list()
     for i in range(amount):
         zakMM.append(random.choice(colors))
-    print(zakMM)
+    return zakMM
 
-zak(amount)
+bag = zak(amount)
+print(bag)
